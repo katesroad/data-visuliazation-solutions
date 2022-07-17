@@ -19,3 +19,4 @@ Derived from reading React Charts
 ## Alternative Resources
 
 - [Educative D3 course](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/xov4AGJy1J3)
+- [D3 core concepts](https://speakerdeck.com/itszero/d3-dot-js-the-core-concepts?slide=11)
