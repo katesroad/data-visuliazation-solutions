@@ -1,0 +1,83 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/tanstack-chart/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/tanstack-chart",
+        "index": "apps/tanstack-chart/src/index.html",
+        "baseHref": "/",
+        "main": "apps/tanstack-chart/src/main.tsx",
+        "polyfills": "apps/tanstack-chart/src/polyfills.ts",
+        "tsConfig": "apps/tanstack-chart/tsconfig.app.json",
+        "assets": [
+          "apps/tanstack-chart/src/favicon.ico",
+          "apps/tanstack-chart/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/tanstack-chart/src/environments/environment.ts",
+              "with": "apps/tanstack-chart/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "tanstack-chart:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "tanstack-chart:build:development"
+        },
+        "production": {
+          "buildTarget": "tanstack-chart:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/tanstack-chart/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/tanstack-chart"],
+      "options": {
+        "jestConfig": "apps/tanstack-chart/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "tanstack-chart": "apps/tanstack-chart",
+    "tanstack-chart-e2e": "apps/tanstack-chart-e2e"
+  }
 }
