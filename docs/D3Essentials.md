@@ -22,3 +22,5 @@ d3.select('body')
 ## [Scales](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/N7qyJ7xQnpD)
 
 **Scales** are functions that map input from a domain to output in a range. They take an input, typically a data point, and convert it into position, length, and color.
+
+## [Chart fundamentals](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/gxVk8X2pyO6)
