@@ -39,7 +39,18 @@ d3.select('body')
   - **[Labels](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/JYg9vywE11y)** provide information for the chart and help to understand the information provided by the axis. D3.js doesn’t have any explicit label component, but `text` is used to add labels to the graph. An example can be found at [drawing the stock chart](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/JYg9vywE11y#Example)
   - [Margins](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/qApPJvDyL52): Although D3.js doesn’t provide an explicit margin component, we will use the `translate()` function to draw margins.
 
+- Path and Line Generator
+  - Fundamentals:
+    - path/d: https://www.w3schools.com/graphics/svg_path.asp
+    - g: Used to group together elements
+  - React Charts usage: [Line.tsx](https://codesandbox.io/s/github/tannerlinsley/react-charts/tree/beta/examples/simple?file=/src/components/Line.tsx)
+
+### Chart Types
+
+### Line Chart
+
 ## API references
 
 - [d3.max, d3.min, and d3.extent](https://observablehq.com/@d3/d3-extent)
 - [`call`](https://www.d3indepth.com/selections/#call)
+- [svg path](https://www.w3schools.com/graphics/svg_path.asp)
