@@ -1,6 +1,8 @@
-# D3 essentials
+# D3 Essentials
 
-## Data binding:
+## d3.js essentials
+
+### Data binding:
 
 - static version: select(selectAll/select) => binding(datum/data) =>
 - dynamic version: enter => update => exit ([example](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/NE5k7g25MyN))
@@ -19,8 +21,19 @@ d3.select('body')
   });
 ```
 
-## [Scales](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/N7qyJ7xQnpD)
+### [Scales](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/N7qyJ7xQnpD)
 
 **Scales** are functions that map input from a domain to output in a range. They take an input, typically a data point, and convert it into position, length, and color.
 
-## [Chart fundamentals](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/gxVk8X2pyO6)
+## [Chart Fundamentals](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/gxVk8X2pyO6)
+
+- [Axis](https://www.educative.io/courses/introduction-to-visualization-using-d3-js/YM2xVK74WlA)
+  - `d3.axisBottom()` creates a bottom horizontal axis.
+  - `d3.axisTop()` creates a top horizontal axis.
+  - `d3.axisLeft()` creates a left vertical axis.
+  - `d3.axisRight()` creates a right vertical axis.
+
+## API references
+
+- [d3.max, d3.min, and d3.extent](https://observablehq.com/@d3/d3-extent)
+- [`call`](https://www.d3indepth.com/selections/#call)
