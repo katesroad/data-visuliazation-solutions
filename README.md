@@ -4,7 +4,7 @@ Project is initiated by NX
 
 ## SCOPE
 
-- Explore Data visualization solutions
+- Explore Data visualization solutions (Found d3 is the industry standard)
 - D3
 - Plotly
 - [Tanstack, React Chart](https://react-charts.tanstack.com/docs/overview)
