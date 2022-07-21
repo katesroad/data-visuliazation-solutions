@@ -8,6 +8,7 @@ Project is initiated by NX
 - D3
 - Plotly
 - [Tanstack, React Chart](https://react-charts.tanstack.com/docs/overview)
+- AntTv
 
 ## D3 Essentials
 
