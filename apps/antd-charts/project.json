@@ -1,0 +1,83 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/antd-charts/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/antd-charts",
+        "index": "apps/antd-charts/src/index.html",
+        "baseHref": "/",
+        "main": "apps/antd-charts/src/main.tsx",
+        "polyfills": "apps/antd-charts/src/polyfills.ts",
+        "tsConfig": "apps/antd-charts/tsconfig.app.json",
+        "assets": [
+          "apps/antd-charts/src/favicon.ico",
+          "apps/antd-charts/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/antd-charts/src/environments/environment.ts",
+              "with": "apps/antd-charts/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "antd-charts:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "antd-charts:build:development"
+        },
+        "production": {
+          "buildTarget": "antd-charts:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/antd-charts/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/antd-charts"],
+      "options": {
+        "jestConfig": "apps/antd-charts/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
